@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Tari Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!--  -->
+<body>
+    <header class="header">
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="/images/Untitled-1.png" alt="">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="link"><a href="#">Home</a></li>
+                    <li class="link"><a href="#">Services</a></li>
+                    <li class="link"><a href="#">Plans</a></li>
+                    <li class="link"><a href="#">Agents</a></li>
+                </ul>
+            </div>
+            <div class="prop">
+                <!-- icon -->
+                <div class="cta">
+                    <p>Get Started</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container center">
+            <div class="hero-wrap">
+                <div class="hero-text">
+                    <h1>Book Affordable Flights & Specials</h1>
+                    <p>TariAir is here to provide you with safe flights. We also opperate locally and internationally for your convienience.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-fill">Get Started</button>
+                        <button class="btn-stroke">Learn More</button>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="top-nav-btn">
+                        <button id="flight" class="active"><i class="fa fa-plane" aria-hidden="true"></i>BOOK FLIGHTS</button>
+                        <button id="hotel"><i class="fa fa-bed" aria-hidden="true"></i>FIND HOTELS</button>
+                        <button id="visa"><i class="fa fa-key" aria-hidden="true"></i>VISA</button>
+                    </div>
+                    <div class="bottom-info">
+                        <div id="sup-wrap" class="sup-wrap">
+                            <div class="selectors">
+                                <div class="roundtrip-handler-wrapper">
+                                    <div class="selector">
+                                        <div id="plan" >
+                                            <p id="round-text">Round Trip</p>
+                                        </div>
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                        
+                                    </div>
+                                    <div id="round-a" class="round-drop">
+                                        <p onclick="handleFill(event)" >Round trip</p>
+                                        <p onclick="handleFill(event)" >One-way</p>
+                                        <p onclick="handleFill(event)" >Multi-city</p>
+                                    </div>
+                                </div>
+
+
+
+                                
+                                <div class="roundtrip-handler-wrapper">
+                                    <div id="plan-a" class="selector">
+                                        <p>1 Passenger</p>
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                        
+                                    </div>
+                                    <div id="round-b" class="round-drop1">
+                                        <div class="ages">
+                                            <div class="person">
+                                                <h3>Adults</h3>
+                                                <p>> 12 Years</p>
+                                            </div>
+                                            <div class="adders">
+                                                <button class="adders-btn">-</button>
+                                                <p>1</p>
+                                                <button class="adders-btn1">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="ages">
+                                            <div class="person">
+                                                <h3>Children</h3>
+                                                <p> 2 - 12 Years</p>
+                                            </div>
+                                            <div class="adders">
+                                                <button class="adders-btn">-</button>
+                                                <p>1</p>
+                                                <button class="adders-btn1">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="ages">
+                                            <div class="person">
+                                                <h3>Infants</h3>
+                                                <p> < 2 Years</p>
+                                            </div>
+                                            <div class="adders">
+                                                <button class="adders-btn">-</button>
+                                                <p>1</p>
+                                                <button class="adders-btn1">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="submit">
+                                            <button>Done</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="roundtrip-handler-wrapper">
+                                    <div id="plan-b" class="selector">
+                                        <p id="text-class">Economy 1</p>
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                    </div>
+                                    <div id="round-c" class="round-c">
+                                        <div class="round-drop2">
+                                            <p onclick="handleClass(event)">Economy 1</p>
+                                            <p onclick="handleClass(event)">Economy 2</p>
+                                            <p onclick="handleClass(event)">Business</p>
+                                            <p onclick="handleClass(event)">First Class</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="locators">
+                                <div class="locator-wrap">
+                                    <div id="locator" class="locator">   
+                                        <p>From where?</p>
+                                        <input id="city" type="text" placeholder="City or Airport">
+                                        <div id="locator-d" class="locator-drop">
+                                            <div onclick="handleCity(event)" id="cities" class="cities">
+                                                <p>Lagos</p>
+                                                <p>Abuja</p>
+                                                <p>Dubai</p>
+                                                <p>London</p>
+                                                <p>Owerri</p>
+                                                <p>Portharcourt</p>
+                                                <p>Johannesburg</p>
+                                                <p>Asaba</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="locator-wrap">
+                                    <div id="locator2" class="locator">   
+                                        <p>To where?</p>
+                                        <input id="dest" type="text" placeholder="City or Airport">
+                                        <div id="locator-b" class="locator-drop">
+                                            <div onclick="handleDest(event)" id="dests" class="cities">
+                                                <p>Lagos</p>
+                                                <p>Abuja</p>
+                                                <p>Dubai</p>
+                                                <p>London</p>
+                                                <p>Owerri</p>
+                                                <p>Portharcourt</p>
+                                                <p>Johannesburg</p>
+                                                <p>Asaba</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dates">
+                                <div class="date1">
+                                    <div class="calendar">
+                                        <span class="material-symbols-sharp">calendar_month</span>
+                                    </div>
+                                    <div class="calendar-text">
+                                        <p>Leaving on</p>
+                                        <input type="date" placeholder="Sep 14, 2022">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="date2">
+                                    <div class="calendar">
+                                        <span class="material-symbols-sharp">calendar_month</span>
+                                    </div>
+                                    <div class="calendar-text">
+                                        <p>Returning on</p>
+                                        <input type="date" placeholder="Sep 14, 2022">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lets-go">
+                                <button>Lets go!</button>
+                            </div>
+                            <div class="bst-val">
+                                <span class="material-symbols-sharp">verified</span>
+                                <p>Best value guaranteed</p>
+                            </div>
+    
+                        </div>
+                        <div id="sup-wrap1" class="sup-wrap2">
+                            <div class="travel-info">
+                                <div class="travel-contxt">
+                                    <p>WHAT ARE YOU TRAVELLING FOR?</p>
+                                    <div class="separators">
+                                        <div class="separator">
+                                            <input type="checkbox">
+                                            <p>BUSINESS</p>
+                                        </div>
+                                        <div class="separator">
+                                            <input type="checkbox">
+                                            <p>LEISURE</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question">
+                                    <p>Why this?</p>
+                                </div>
+                            </div>
+                            <div class="locator-wrap">
+                                <div class="locator">   
+                                    <p>Going to?</p>
+                                    <input id="lodge" type="text" placeholder="Destination, city or hotel name">
+                                </div>
+                                <div id="lodging" class="lodging">
+                                    <div class="lodge">
+                                        
+                                        <div class="lodge-h">
+                                            <h3>Recent Places</h3>
+                                        </div>
+                                        <div class="lodge-p">
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                            <p>hotel</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dates">
+                                <div class="date1">
+                                    <div class="calendar">
+                                        <span class="material-symbols-sharp">calendar_month</span>
+                                    </div>
+                                    <div class="calendar-text">
+                                        <p>Check in</p>
+                                        <input type="text" placeholder="Sep 14, 2022">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="date2">
+                                    <div class="constr">
+                                        <p>Check out</p>
+                                        <input type="text" placeholder="Sep 14, 2022">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="halo-accent">
+                                <button id="halo-btn" class="halo-btn">
+                                    <div class="halo-cont">
+                                        <div class="btn-cont">
+                                            <p>Rooms and Guests</p>
+                                            <p>1 Room, 1 Guest</p>
+                                        </div>
+                                        <div class="btn-chevron">
+                                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </button>
+                                <div id="room-num" class="room-num">
+                                    <div id="room-b" class="room-b">
+                                        <div class="topic">
+                                            <h3>Room 1</h3>
+                                        </div>
+                                        <div class="agean-wrap">
+                                            <div class="agean">
+                                                <div class="person">
+                                                    <h3>Adults</h3>
+                                                    <p>> 12 Years</p>
+                                                </div>
+                                                <div class="adders">
+                                                    <button class="adders-btn">-</button>
+                                                    <p>1</p>
+                                                    <button class="adders-btn1">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="agean">
+                                                <div class="person">
+                                                    <h3>Children</h3>
+                                                    <p> 2 - 12 Years</p>
+                                                </div>
+                                                <div class="adders">
+                                                    <button class="adders-btn">-</button>
+                                                    <p>1</p>
+                                                    <button class="adders-btn1">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="agean">
+                                                <div class="person">
+                                                    <h3>Infants</h3>
+                                                    <p> < 2 Years</p>
+                                                </div>
+                                                <div class="adders">
+                                                    <button class="adders-btn">-</button>
+                                                    <p>1</p>
+                                                    <button class="adders-btn1">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="submits">
+                                            <button>Add Room 2 +</button>
+                                            <button>Done</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="halo-sub">
+                                    <button class="search">Search</button>
+                                </div>
+                            </div>
+                            <div class="bst-val">
+                                <span class="material-symbols-sharp">verified</span>
+                                <p>Best value guaranteed</p>
+                            </div>
+
+                        </div>
+                        <div id="sup-wrap2" class="sup-wrap3">
+                            <div class="visa-accent">
+                                <button class="search">DUBAI VISA</button>
+                                <button class="visa-btn">OTHER VISA</button>
+                            </div>
+                            <div class="bst-val">
+                                <span class="material-symbols-sharp">verified</span>
+                                <p>Best value guaranteed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+            </div>
+        </div>
+        <div class="caret"></div>
+    </section>
+
+    <section class="features">
+        <div class="features-cont">
+            <div class="feature-header">Why Tari Air?</div>
+            <div class="feature-wrap">
+                <div class="feature">
+                    <div class="feature-top">
+                        <i class="fa fas-globe"></i>
+                        <h3>We are recognized globally</h3>
+                    </div>
+                    <p>Tari Air is a leading, full-service online travel company.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-top">
+                        <i class="fa fas-globe"></i>
+                        <h3>Your Comfort & Safety is our Priority</h3>
+                    </div>
+                    <p>We understand that everyone likes easy and affordable travel services, 
+                        so we provide our customers with a  booking portal for Affordable Flights, Hotels</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-top">
+                        <i class="fa fas-globe"></i>
+                        <h3>We are Just a call away</h3>
+                    </div>
+                    <p>Tari Air is a leading, full-service online travel company. Reach us 24/7 (Monday - Sunday)</p>
+                </div>
+            </div>
+        </div>
+        <div class="carot"></div>
+    </section>
+
+    <section class="get-ourApp">
+        <div class="app-text">
+            <div class="app-text-heading">
+                <h3>Book flights conviently any time any where using our mobile App.</h3>
+            </div>
+            <div class="app-text-paragraph">
+                <p>We fly both locally and internationally and have created an app to make your journey easier. Get an amazing mobile app experience. <br></p>
+            </div>
+        </div>
+        <div class="app-img">
+
+        </div>
+    </section>
+
+    <section class="the-rest">
+        <div class="rest-cont">
+            <div class="rest-text">
+                <h3>Like travel deals?</h3>
+                <p>Enter your email and we'll send them your way.</p>
+                <div class="input-btn">
+                    <div class="rest-input">
+                        <input type="text" placeholder="Enter your email address">
+                        <p>Email address is invalid. Kindly provide a valid email</p>
+                    </div>
+                    <button>Subscribe</button>
+                </div>
+                <p>Your privacy is important to us, so we'll never spam you or share your info with third parties. 
+                    Take a look at our privacy policy. You can unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        
+    </footer>
+
+
+
+
+
+    <script src="/script.js"></script>
+</body>
+</html>
